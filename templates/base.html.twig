@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+
+    {% block stylesheets %}{% endblock %}
+    <style>.body{font-family:Lato,sans-serif;font-size:16px}h2,h3,h4,h5,h6,nav h1{color:#fff}.fixed-top{top:5px!important}.navbar-brand span{color:#fed136;font-family:Lato,Helvetica Neue,Helvetica,Arial,cursive}.navbar-brand,.navbar-brand span{font-size:25px;font-weight:700;letter-spacing:.1em}.navbar-brand{color:#fff;font-family:Quicksand,Helvetica Neue,Helvetica,Arial,cursive}.navbar-nav .nav-item .nav-link{padding:1.1em 1em!important;font-size:120%;font-weight:500;letter-spacing:1px;color:#fff;font-family:Quicksand,sans-serif}.navbar-nav .nav-item .nav-link:hover{color:#fed136}.navbar-expand-md .navbar-nav .dropdown-menu{border-top:3px solid #fed136}.dropdown-item:hover{background-color:#fed136;color:#fff}nav{-webkit-transition:padding-top .3s,padding-bottom .3s;-moz-transition:padding-top .3s,padding-bottom .3s;transition:padding-top .3s,padding-bottom .3s;border:none}.account{font-size:45px;margin-top:60px;min-height:500px}.account a{color:#000}.shrink{padding-top:0;padding-bottom:0;background-color:#212529}hr.style1{border-top:2px solid #000}.banner{background-image:url(https://preprod-www.kohidas.com/build/header.5dfd61bf.jpg);background-repeat:no-repeat;background-attachment:scroll;background-position:50%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.banner,.banner-account{text-align:center;color:#fff}.banner-account{background-color:#000;min-height:100px}.banner-text{padding:200px 0 150px}.banner-heading{font-family:Quicksand,cursive;font-size:69px;font-weight:400;line-height:100px;margin-bottom:30px;color:#fff}.banner-sub-heading{font-family:Lato Regular,serif;font-size:20px;font-weight:300;line-height:20px;margin-bottom:40px;color:#fff}.btn-banner{font-family:Lato,sans-serif;font-size:14px;font-weight:700;padding:5px 20px;border-color:#ffb71d;line-height:2.5;text-align:center;color:#fff;background-color:transparent;text-transform:uppercase}.text-intro{width:90%;margin:auto;text-align:center;padding-top:30px}main{background:#fff}h2,h3,h4,h5,h6,main,main h1{color:#000}.checkbox{visibility:hidden;height:0;margin:0;padding:0}.group-checkbox{width:108%}.spanbox{display:inline-block;width:45%;text-align:center;margin-right:10px;padding:7px 0;border:1px solid #000;cursor:pointer}.spanbox.active{background:#000;color:#e0a12c}footer{background:#000;color:#fff}footer h1,h2,h3,h4,h5,h6{color:#fff;text-transform:uppercase}.kfooter{font:normal 15px Lato,sans-serif}.kfooterlink,.kfooterlink a{font:700 13px Lato,sans-serif}.kfooterlink a{color:#fff}@media (max-width:500px){.navbar-nav{background-color:#000;border-top:3px solid #fed136;color:#fff;z-index:1;margin-top:5px}.navbar-nav .nav-item .nav-link{padding:.7em 1em!important;font-size:100%;font-weight:500}.banner-text{padding:150px 0}.banner-heading{font-size:30px;line-height:30px;margin-bottom:20px}.banner-sub-heading{font-size:10px;font-weight:200;line-height:10px;margin-bottom:40px}.account{font-size:30px;margin-top:20px;min-height:200px}}@media (max-width:768px){.banner-text{padding:150px 0}.banner-sub-heading{font-size:23px;font-weight:200;line-height:23px;margin-bottom:40px}}</style>
+
+</head>
+
+<body>
+
+{% block body %}{% endblock %}
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+    <div class="container">
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link"  href="#">Contacts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% block javascripts %}{% endblock %}
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Copyright © 2019 eg</div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</body>
 </html>
+<script>
+    $(document).on("scroll", function(){
+        if
+        ($(document).scrollTop() > 16){
+            $("#banner").addClass("shrink");
+        }
+        else
+        {
+            $("#banner").removeClass("shrink");
+        }
+    });
+</script>
